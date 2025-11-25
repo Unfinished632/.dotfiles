@@ -16,6 +16,7 @@ return{
   end,
   config = function()
     local coq = require "coq"
+    vim.lsp.config('*', coq.lsp_ensure_capabilities())
 
     -- C/C++
     vim.lsp.enable("clangd")
